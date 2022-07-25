@@ -37,7 +37,7 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       'Add Phone Number',
                       style: TextStyle(
@@ -48,23 +48,23 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
-                Text(
+                const Text(
                   'Enter an active phone number. We will send a validation code to verify it\'s you',
                   style: TextStyle(
                       color: Color(0xff0D253C), fontSize: 14, fontWeight: FontWeight.normal),
                   textAlign: TextAlign.left,
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 78,
                 ),
 
 
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       'Phone Number',
                       style: TextStyle(
@@ -73,21 +73,21 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Expanded(
                     child: TextFormField(
                       controller: phoneNumberController,
                       keyboardType: TextInputType.number,
                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                       decoration: InputDecoration(
-                        fillColor: Color(0xffEEF5F9),
+                        fillColor: const Color(0xffEEF5F9),
                         filled: true,
-                        contentPadding: EdgeInsets.only(top: 10, bottom: 10),
+                        contentPadding: const EdgeInsets.only(top: 10, bottom: 10),
                         border: OutlineInputBorder(
                             borderSide: BorderSide.none,
                             borderRadius:
                             BorderRadius.circular(10)),
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.phone,
                           color: Color(0xff3ad0d6),
                         ),
@@ -107,8 +107,8 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
               ],
             ),
           ),
-          Spacer(),
-              phoneNumberController.value.text.isEmpty
+          const Spacer(),
+          phoneNumberController.value.text.isEmpty
               ? Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: SizedBox(
@@ -121,8 +121,8 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      Color(0xff2A9CDF).withOpacity(0.45),
-                      Color(0xff00C4CC).withOpacity(0.55),
+                      const Color(0xff2A9CDF).withOpacity(0.45),
+                      const Color(0xff00C4CC).withOpacity(0.55),
                     ],
                   ),
                 ),
@@ -130,25 +130,25 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       // If the form is valid, display a Snackbar.
-                      Scaffold.of(context).showSnackBar(SnackBar(
+                      Scaffold.of(context).showSnackBar(const SnackBar(
                           content: Text('Processing Data')
                       )
                       );
                     }
                   },
-                  child: Text(
-                    'NEXT',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  ),
                   style: ElevatedButton.styleFrom(
                       primary: Colors.transparent,
                       shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
                           borderRadius:
                           BorderRadius.circular(50))),
+                  child: const Text(
+                    'NEXT',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
             ),
@@ -161,7 +161,7 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
@@ -174,19 +174,11 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       // If the form is valid, display a Snackbar.
-                      Scaffold.of(context).showSnackBar(SnackBar(
+                      Scaffold.of(context).showSnackBar(const SnackBar(
                           content: Text('Processing Data')));
                     }
-                    widget.d.animateToPage(1, duration: Duration(seconds: 1), curve: Curves.easeIn);
+                    widget.d.animateToPage(1, duration: const Duration(seconds: 1), curve: Curves.easeIn);
                   },
-
-                  child: Text(
-                    'NEXT',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  ),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.transparent,
                     shadowColor: Colors.transparent,
@@ -195,14 +187,22 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                       BorderRadius.circular(50),
                     ),
                   ),
+
+                  child: const Text(
+                    'NEXT',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
-          Text(
+          const Text(
             'Remind Later',
             style: TextStyle(
                 color: Color(0xff3ad0d6),
@@ -210,7 +210,7 @@ class _AddPhoneNumberContentState extends State<AddPhoneNumberContent> {
                 fontWeight: FontWeight.w600
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
 

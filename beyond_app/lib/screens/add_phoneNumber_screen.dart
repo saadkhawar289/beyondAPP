@@ -30,8 +30,8 @@ class _AddPhoneNumberState extends State<AddPhoneNumber> {
           body: Container(
             height: height,
             width: width,
-            decoration: BoxDecoration(
-                image: const DecorationImage(
+            decoration: const BoxDecoration(
+                image: DecorationImage(
                   image: AssetImage(
                     'assets/images/X_2.png',
                   ),
@@ -40,10 +40,10 @@ class _AddPhoneNumberState extends State<AddPhoneNumber> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                const Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                         horizontal: 20.0, vertical: 15),
                   ),
                 ),
@@ -57,7 +57,7 @@ class _AddPhoneNumberState extends State<AddPhoneNumber> {
                             topLeft: Radius.circular(28),
                             topRight: Radius.circular(28))),
                     child:  PageView(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       controller: _pageController,
                       // onPageChanged: (index) {
                       //   setState(() {
@@ -65,7 +65,7 @@ class _AddPhoneNumberState extends State<AddPhoneNumber> {
                       //     currentPage = index;
                       //   });
                       // },
-                      children: [ AddPhoneNumberContent(_pageController), PhoneValidationContent()],
+                      children: [ AddPhoneNumberContent(_pageController), const PhoneValidationContent()],
                     ) ,
                   ),
                 ),

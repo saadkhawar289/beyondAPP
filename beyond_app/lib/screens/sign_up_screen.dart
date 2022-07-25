@@ -153,8 +153,8 @@ class _SignUpState extends State<SignUp> {
           body: Container(
             height: height,
             width: width,
-            decoration: BoxDecoration(
-                image: const DecorationImage(
+            decoration: const BoxDecoration(
+                image: DecorationImage(
                   image: AssetImage(
                     'assets/images/X_2.png',
                   ),
@@ -163,42 +163,42 @@ class _SignUpState extends State<SignUp> {
             child:    Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                const Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                         horizontal: 20.0, vertical: 15),
                   ),
                 ),
 
-                 Expanded(
-                    flex: 7,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(28),
-                              topRight: Radius.circular(28))),
-                      child: PageView(
-                        physics: NeverScrollableScrollPhysics(),
-                        controller: _pageController,
-                        // onPageChanged: (index) {
-                        //   setState(() {
-                        //     _pageController.animateToPage(page, duration: duration, curve: curve)
-                        //     currentPage = index;
-                        //   });
-                        // },
-                        children: [ CreateAccountContent1(_pageController) ,CreateAccountContent2(_pageController), EmailValidationContent()],
-                      ) ,
-                    )
+                Expanded(
+                  flex: 7,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(28),
+                            topRight: Radius.circular(28))),
+                    child: PageView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      controller: _pageController,
+                      // onPageChanged: (index) {
+                      //   setState(() {
+                      //     _pageController.animateToPage(page, duration: duration, curve: curve)
+                      //     currentPage = index;
+                      //   });
+                      // },
+                      children: [ CreateAccountContent1(_pageController) ,CreateAccountContent2(_pageController), const EmailValidationContent()],
+                    ) ,
+                  )
 
 
-                   ,
+                  ,
 
 
 
-                  ),
+                ),
 
               ],
             ),
@@ -206,6 +206,5 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
-    ;
   }
 }

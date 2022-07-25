@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 class TemplateScreen extends StatefulWidget {
- final Widget child;
-   TemplateScreen(this.child) ;
+  final Widget child;
+  TemplateScreen(this.child) ;
 
   @override
   State<TemplateScreen> createState() => _TemplateScreenState();

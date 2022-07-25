@@ -54,10 +54,10 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                         width: 6,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: Color(0xffb5edf0)
+                            color: const Color(0xffb5edf0)
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 3,
                       ),
                       Container(
@@ -65,10 +65,10 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                         width: 24,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(45),
-                            color: Color(0xff00C4CC)
+                            color: const Color(0xff00C4CC)
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 3,
                       ),
                       Container(
@@ -76,13 +76,13 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                         width: 6,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: Color(0xffb5edf0)
+                            color: const Color(0xffb5edf0)
                         ),
                       )
                     ],
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Create Account',
                         style: TextStyle(
@@ -93,11 +93,11 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 26,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Email',
                         style: TextStyle(
@@ -113,15 +113,15 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                         child: TextFormField(
                           controller: createEmailController,
                           decoration: InputDecoration(
-                            fillColor: Color(0xffEEF5F9),
+                            fillColor: const Color(0xffEEF5F9),
                             filled: true,
                             contentPadding:
-                            EdgeInsets.only(top: 10, bottom: 10),
+                            const EdgeInsets.only(top: 10, bottom: 10),
                             border: OutlineInputBorder(
                               borderSide: BorderSide.none,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            prefixIcon: Icon(
+                            prefixIcon: const Icon(
                               Icons.mail,
                               color: Color(0xff3ad0d6),
                             ),
@@ -137,11 +137,11 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Create Password',
                         style: TextStyle(
@@ -152,19 +152,19 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                   Container(
                     width: width,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 8),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Expanded(
                         child: TextFormField(
                           controller: createPasswordController,
                           decoration: InputDecoration(
-                              fillColor: Color(0xffEEF5F9),
+                              fillColor: const Color(0xffEEF5F9),
                               filled: true,
                               contentPadding:
-                              EdgeInsets.only(top: 10, bottom: 10),
+                              const EdgeInsets.only(top: 10, bottom: 10),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(10)),
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.lock,
                                 color: Color(0xff3ad0d6),
                               ),
@@ -199,11 +199,11 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Confirm Password',
                         style: TextStyle(
@@ -214,19 +214,19 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                   Container(
                     width: width,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 8),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Expanded(
                         child: TextFormField(
                           controller: confirmPasswordController,
                           decoration: InputDecoration(
-                              fillColor: Color(0xffEEF5F9),
+                              fillColor: const Color(0xffEEF5F9),
                               filled: true,
                               contentPadding:
-                              EdgeInsets.only(top: 10, bottom: 10),
+                              const EdgeInsets.only(top: 10, bottom: 10),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(10)),
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.lock,
                                 color: Color(0xff3ad0d6),
                               ),
@@ -280,8 +280,8 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Color(0xff2A9CDF).withOpacity(0.45),
-                              Color(0xff00C4CC).withOpacity(0.55),
+                              const Color(0xff2A9CDF).withOpacity(0.45),
+                              const Color(0xff00C4CC).withOpacity(0.55),
                             ],
                           ),
                         ),
@@ -289,25 +289,25 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               // If the form is valid, display a Snackbar.
-                              Scaffold.of(context).showSnackBar(SnackBar(
+                              Scaffold.of(context).showSnackBar(const SnackBar(
                                   content: Text('Processing Data')
                               )
                               );
                             }
                           },
-                          child: Text(
-                            'NEXT',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600),
-                          ),
                           style: ElevatedButton.styleFrom(
                               primary: Colors.transparent,
                               shadowColor: Colors.transparent,
                               shape: RoundedRectangleBorder(
                                   borderRadius:
                                   BorderRadius.circular(50))),
+                          child: const Text(
+                            'NEXT',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                     ),
@@ -320,7 +320,7 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                       child: DecoratedBox(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
@@ -333,18 +333,11 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               // If the form is valid, display a Snackbar.
-                              Scaffold.of(context).showSnackBar(SnackBar(
+                              Scaffold.of(context).showSnackBar(const SnackBar(
                                   content: Text('Processing Data')));
-                              widget.c.animateToPage(2, duration: Duration(seconds: 1), curve: Curves.easeIn);
+                              widget.c.animateToPage(2, duration: const Duration(seconds: 1), curve: Curves.easeIn);
                             }
                           },
-                          child: Text(
-                            'NEXT',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600),
-                          ),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.transparent,
                             shadowColor: Colors.transparent,
@@ -353,17 +346,24 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                               BorderRadius.circular(50),
                             ),
                           ),
+                          child: const Text(
+                            'NEXT',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'Already have an account? ',
                         style: TextStyle(
                             color: Colors.black87,
@@ -375,7 +375,7 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                         onTap: (){
                           Navigator.pushNamed(context, '/login');
                         },
-                        child: Text(
+                        child: const Text(
                           'LOG IN',
                           style: TextStyle(
                               color: Color(0xff3ad0d6),
@@ -386,7 +386,7 @@ class _CreateAccountContent2State extends State<CreateAccountContent2> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   )
 

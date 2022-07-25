@@ -71,10 +71,10 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                     width: 6,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Color(0xffb5edf0)
+                        color: const Color(0xffb5edf0)
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Container(
@@ -82,10 +82,10 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                     width: 6,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Color(0xffb5edf0)
+                        color: const Color(0xffb5edf0)
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Container(
@@ -93,13 +93,13 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                     width: 24,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(45),
-                        color: Color(0xff00C4CC)
+                        color: const Color(0xff00C4CC)
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             const Padding(
@@ -168,19 +168,19 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                       }
                     },
                     pinTheme: PinTheme(
-                      activeFillColor: Color(0xffEEF5F9),
-                      shape: PinCodeFieldShape.box,
-                      borderRadius: BorderRadius.circular(1),
-                      fieldHeight: 55,
-                      activeColor: Color(0xffEEF5F9),
-                      selectedFillColor: Color(0xffEEF5F9),
-                      selectedColor: Color(0xffEEF5F9),
-                      inactiveColor: Color(0xffEEF5F9),
-                      inactiveFillColor: Color(0xffEEF5F9),
-                      fieldWidth: 55,
-                      errorBorderColor: Colors.redAccent
+                        activeFillColor: const Color(0xffEEF5F9),
+                        shape: PinCodeFieldShape.box,
+                        borderRadius: BorderRadius.circular(1),
+                        fieldHeight: 55,
+                        activeColor: const Color(0xffEEF5F9),
+                        selectedFillColor: const Color(0xffEEF5F9),
+                        selectedColor: const Color(0xffEEF5F9),
+                        inactiveColor: const Color(0xffEEF5F9),
+                        inactiveFillColor: const Color(0xffEEF5F9),
+                        fieldWidth: 55,
+                        errorBorderColor: Colors.redAccent
                     ),
-                    cursorColor: Color(0xff3ad0d6),
+                    cursorColor: const Color(0xff3ad0d6),
                     animationDuration: const Duration(milliseconds: 300),
                     controller: textEditingController,
                     keyboardType: TextInputType.number,
@@ -236,6 +236,17 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
             Container(
               margin: const EdgeInsets.symmetric(
                   vertical: 16.0, horizontal: 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xff2A9CDF),
+                    Color(0xff00C4CC),
+                  ],
+                ),
+              ),
               child: ButtonTheme(
                 height: 50,
                 child: TextButton(
@@ -252,8 +263,8 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                               Container(
                                 height: 105,
                                 width: 105,
-                                decoration: BoxDecoration(
-                                    image: const DecorationImage(
+                                decoration: const BoxDecoration(
+                                    image: DecorationImage(
                                       image: AssetImage(
                                         'assets/images/Group_61.png',
                                       ),
@@ -261,10 +272,10 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                     )
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
-                              Text(
+                              const Text(
                                 'Account Created!',
                                 style: TextStyle(
                                   color: Color(0xff3ad0d6),
@@ -272,7 +283,7 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -284,7 +295,7 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               InkWell(
                                 onTap: (){
                                   Navigator.pushNamed(context, '/appPhoneNumber');
@@ -294,7 +305,7 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                   width: width * 0.45,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
                                       colors: [
@@ -306,9 +317,9 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                   child: Center(
                                     child: InkWell(
                                       onTap: (){
-                                        Navigator.pushNamed(context, '');
+                                        Navigator.pushNamed(context, '/addPhoneNumber');
                                       },
-                                      child: Text(
+                                      child: const Text(
                                         'ADD PHONE',
                                         style: TextStyle(
                                             fontSize: 15,
@@ -319,15 +330,20 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
-                              Text(
-                                'Skip Now',
-                                style: TextStyle(
-                                  color: Color(0xff3ad0d6),
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w600,
+                              InkWell(
+                                onTap: (){
+                                  Navigator.pushNamed(context, '/messageScreen1');
+                                },
+                                child: const Text(
+                                  'Skip Now',
+                                  style: TextStyle(
+                                    color: Color(0xff3ad0d6),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ],
@@ -364,23 +380,16 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                       )),
                 ),
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xff2A9CDF),
-                    Color(0xff00C4CC),
-                  ],
-                ),
-              ),
             ),
             const SizedBox(
               height: 14,
             ),
-              Center(
-                child: Text(
+            Center(
+              child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: const Text(
                   'Change Email',
                   style: TextStyle(
                       color: Color(0xff3ad0d6),
@@ -389,9 +398,10 @@ class _EmailValidationContentState extends State<EmailValidationContent> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              )
+            ),
+            const SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),

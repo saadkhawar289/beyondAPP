@@ -126,19 +126,19 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                       }
                     },
                     pinTheme: PinTheme(
-                        activeFillColor: Color(0xffEEF5F9),
+                        activeFillColor: const Color(0xffEEF5F9),
                         shape: PinCodeFieldShape.box,
                         borderRadius: BorderRadius.circular(1),
                         fieldHeight: 55,
-                        activeColor: Color(0xffEEF5F9),
-                        selectedFillColor: Color(0xffEEF5F9),
-                        selectedColor: Color(0xffEEF5F9),
-                        inactiveColor: Color(0xffEEF5F9),
-                        inactiveFillColor: Color(0xffEEF5F9),
+                        activeColor: const Color(0xffEEF5F9),
+                        selectedFillColor: const Color(0xffEEF5F9),
+                        selectedColor: const Color(0xffEEF5F9),
+                        inactiveColor: const Color(0xffEEF5F9),
+                        inactiveFillColor: const Color(0xffEEF5F9),
                         fieldWidth: 55,
                         errorBorderColor: Colors.redAccent
                     ),
-                    cursorColor: Color(0xff3ad0d6),
+                    cursorColor: const Color(0xff3ad0d6),
                     animationDuration: const Duration(milliseconds: 300),
                     controller: textEditingController,
                     keyboardType: TextInputType.number,
@@ -194,6 +194,17 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
             Container(
               margin: const EdgeInsets.symmetric(
                   vertical: 16.0, horizontal: 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xff2A9CDF),
+                    Color(0xff00C4CC),
+                  ],
+                ),
+              ),
               child: ButtonTheme(
                 height: 50,
                 child: TextButton(
@@ -210,8 +221,8 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                               Container(
                                 height: 105,
                                 width: 105,
-                                decoration: BoxDecoration(
-                                    image: const DecorationImage(
+                                decoration: const BoxDecoration(
+                                    image: DecorationImage(
                                       image: AssetImage(
                                         'assets/images/Group_61.png',
                                       ),
@@ -219,10 +230,10 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                     )
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
-                              Text(
+                              const Text(
                                 'Congratulations!',
                                 style: TextStyle(
                                   color: Color(0xff3ad0d6),
@@ -230,7 +241,7 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -242,7 +253,7 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               InkWell(
                                 onTap: (){
                                   Navigator.pushNamed(context, '/messageScreen1');
@@ -252,7 +263,7 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                   width: width * 0.45,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                       begin: Alignment.topLeft,
                                       end: Alignment.bottomRight,
                                       colors: [
@@ -261,7 +272,7 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                       ],
                                     ),
                                   ),
-                                  child: Center(
+                                  child: const Center(
                                     child: Text(
                                       'CONTINUE',
                                       style: TextStyle(
@@ -272,14 +283,14 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
                               InkWell(
                                 onTap: (){
                                   Navigator.pushNamed(context, '/messageScreen1');
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Create Message',
                                   style: TextStyle(
                                     color: Color(0xff3ad0d6),
@@ -322,22 +333,11 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                       )),
                 ),
               ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xff2A9CDF),
-                    Color(0xff00C4CC),
-                  ],
-                ),
-              ),
             ),
             const SizedBox(
               height: 14,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Change Number',
                 style: TextStyle(
@@ -347,7 +347,7 @@ class _PhoneValidationContentState extends State<PhoneValidationContent> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             )
           ],

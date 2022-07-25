@@ -9,7 +9,7 @@ import 'package:beyond_app/screens/splash_screen.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (BuildContext context) {
       return const MyApp();
     },
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         '/': (context) =>  const SplashScreen(),
         '/login': (context) => const Login(),
         '/signUp': (context) => const SignUp(),
-        '/appPhoneNumber': (context) => const AddPhoneNumber(),
+        '/addPhoneNumber': (context) => const AddPhoneNumber(),
         '/messageScreen1': (context) => const Messages(),
 
       },
